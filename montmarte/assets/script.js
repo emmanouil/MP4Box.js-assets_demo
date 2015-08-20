@@ -29,14 +29,15 @@ textTrack.oncuechange = function(){
 	
 	//find expired cues
 	elements.forEach(function (item, index, array){
-	console.log('item: '+ item.endTime + '  video: '+video.currentTime);
 		if(item.endTime < video.currentTime){
 			elements.splice(index, 1);
 		}else{
 			cueHTML+=item.text;
 		}
 	});
-	
+
+	//display
 	test.innerHTML=cueHTML;
 };
+
 //video.play();
