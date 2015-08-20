@@ -1,0 +1,20 @@
+#other testfiles
+
+#from chess.js
+assets/chess.js/*
+!assets/chess.js/chess.js
+
+#from chessboardjs
+assets/chessboardjs/*
+!assets/chessboardjs
+!assets/chessboardjs/www
+!assets/chessboardjs/www/css
+!assets/chessboardjs/www/js
+!assets/chessboardjs/www/css/chessboard.css
+!assets/chessboardjs/www/js/json3.min.js
+!assets/chessboardjs/www/js/jquery-1.10.1.min.js
+!assets/chessboardjs/www/js/chessboard.js
+
+
+#webserver used for local testing
+mongoose-free-5.5.exe
