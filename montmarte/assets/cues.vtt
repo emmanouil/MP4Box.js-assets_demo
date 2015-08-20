@@ -1,0 +1,25 @@
+WEBVTT FILE
+
+1
+00:00:00.500 --> 00:00:14.000
+<img src="assets/txt_montmarte.svg" style="position:absolute;top:100px;height:50px;background-color:rgba(221,221,221,0.3);">
+
+2
+00:00:02.500 --> 00:00:04.300
+<img src="assets/txt_is_a_hill.svg" style="position:absolute;top:200px;height:40px;background-color:rgba(221,221,221,0.3);">
+
+3
+00:00:05.000 --> 00:00:07.000
+<img src="assets/txt_and_a_district.svg" style="position:absolute;top:250px;height:40px;background-color:rgba(221,221,221,0.3);">
+
+4
+00:00:07.100 --> 00:00:11.000
+test text test text test text
+
+5
+00:00:10.100 --> 00:00:21.000
+<img src="assets/txt_basilica.svg" style="position:absolute;top:330px;left:300px;height:50px;background-color:rgba(221,221,221,0.3);">
+
+6
+00:00:12.100 --> 00:00:15.000
+<img src="assets/txt_is_a_church.svg" style="position:absolute;top:390px;left:300px;height:50px;background-color:rgba(221,221,221,0.3);">
