@@ -1,7 +1,9 @@
 #other testfiles
+!assets/
 
 #from chess.js
 assets/chess.js/*
+!assets/chess.js/
 !assets/chess.js/chess.js
 
 #from chessboardjs
