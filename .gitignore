@@ -1,10 +1,10 @@
 #other testfiles
-!assets/
+!/assets/
 
 #from chess.js
-assets/chess.js/*
-!assets/chess.js/
-!assets/chess.js/chess.js
+/assets/chess.js/*
+!/assets/chess.js/
+!/assets/chess.js/chess.js
 
 #from chessboardjs
 assets/chessboardjs/*
