@@ -8,12 +8,62 @@ var board = ChessBoard('board', 'start');	//Chessboard
 
 //video.addEventListener("play", function() { console.log('two'); video.pause(); }, true);
 
+//find next string between two \n characters
+function sliceText(text_in, index_in){
+	var index = text_in.indexOf('\n', index_in);
+	return index;
+}
+
 function updateBoard(cue){
-	var index = cue.text.indexOf('\n');
-	//console.log('index '+cue.text.indexOf('\n'));
-	board.position(cue.text.substring(0,index));
+	
+	text_in = cue.text;
+	
+	//processing pawn placement
+	var index = text_in.indexOf('\n');		//find where FEN ends
+	board.position(text_in.substring(0,index));
+
+	if(text_in.indexOf('link:')<0){
+		test.innerHTML='That\'s All Folks!';
+		board.position(text_in);
+		return;
+	}
+	
+	//processing game info
+	var output = '<table style="width:600px;">';	//HTML-formated output
+	var count = 0;	//safety net during testing
+	var index1, index2 =0;	//text indexes
+	var link;
+	do{
+		output += '<tr>';
+		index1 = index2;
+		count++;
+		index1 = text_in.indexOf('\n', index1);
+		index2 = text_in.indexOf('\n', index1+1);
+		//index2 = sliceText(text_in, index1+1);
+		console.log(text_in.slice(index1+1, index2));
+		switch(text_in.slice(index1+1, index1+6)){
+			case "next:":
+				output+='<td> Next play: </td><td>'+text_in.slice(index1+7, index2) + '</td>';
+				break;
+			case "last:":
+				output+='<td>Previous move: </td><td>'+text_in.slice(index1+7, index2) + '</td>';
+				break;
+			case "odds:":
+				output+='<td>Outcome odds: </td><td>'+text_in.slice(index1+7, index2) + '</td>';
+				break;
+			case "also:":
+				output+='<td>This board also appeared in: </td><td><a href="'+link+'">'+text_in.slice(index1+7, index2) + '</a></td>';
+				break;				
+			case "link:":
+				link=text_in.slice(index1+7, index2);
+				break;
+		}
+		output += '</tr>';
+	}while(index2>0 && count <10)
+	output += '</table>';
+	
 	var txt = cue.text.slice(index+1);	//+1 because we do not want the \n character
-	console.log(txt);
+	test.innerHTML=output;
 }
 
 function updateCues(){
@@ -39,6 +89,11 @@ function updateCues(){
 
 //we have a cue change
 textTrack.oncuechange = function(){
+	
+	var cue = this.activeCues[0];	//we assume 1 active cue at a time
+	if(!!cue)
+		updateBoard(cue);
+/*
 	var counter = 0;
 	var looper = true;
 	cueHTML = null;
@@ -61,7 +116,7 @@ textTrack.oncuechange = function(){
 	}while(looper);
 	
 	updateCues();
-
+*/
 };
 
 video.addEventListener("seeked", updateCues(), true);
