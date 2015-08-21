@@ -9,8 +9,11 @@ var board = ChessBoard('board', 'start');	//Chessboard
 //video.addEventListener("play", function() { console.log('two'); video.pause(); }, true);
 
 function updateBoard(cue){
-	console.log('index '+cue.text.indexOf('\n'));
-	board.position(cue.text);
+	var index = cue.text.indexOf('\n');
+	//console.log('index '+cue.text.indexOf('\n'));
+	board.position(cue.text.substring(0,index));
+	var txt = cue.text.slice(index+1);	//+1 because we do not want the \n character
+	console.log(txt);
 }
 
 function updateCues(){
