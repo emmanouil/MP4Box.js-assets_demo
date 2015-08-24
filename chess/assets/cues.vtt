@@ -125,7 +125,7 @@ also: L'Ami vs Bok, 2015 (1/2-1/2)
 13
 00:02:09.100 --> 00:02:47.000
 rnbq1rk1/ppp1ppbp/6p1/8/3PP3/2B5/PP3PPP/R11QKBNR
-next: black
+next: white
 last: 7. Bc3 ... O-O
 odds: Not enough games in the database
 link: http://www.chessgames.com/perl/chessgame?gid=1795288
@@ -134,10 +134,20 @@ also: L'Ami vs Bok, 2015 (1/2-1/2)
 14
 00:02:47.100 --> 00:04:04.000
 rnbq1rk1/ppp1ppbp/6p1/8/3PP3/2B5/PP1Q1PPP/R3KBNR
+next: black
+last: 7. Qd2
+odds: Not enough games in the database
+link: http://www.chessgames.com/perl/chessgame?gid=1779804
+also: Tomashevsky vs Volokitin, 2014 (1/2-1/2) 
 
 15
 00:04:04.100 --> 00:04:30.000
 r1bq1rk1/ppp1ppbp/2n3p1/8/3PP3/2B5/PP1Q1PPP/R3KBNR
+next: white
+last: 7. Qd2 Nc6
+odds: Not enough games in the database
+link: http://www.chessgames.com/perl/chessgame?gid=1779804
+also: Tomashevsky vs Volokitin, 2014 (1/2-1/2) 
 
 15
 00:04:30.100 --> 00:04:55.000
